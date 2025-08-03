@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Smartphone, Stethoscope } from "lucide-react";
-import phoneImage from "@/assets/phone-mockup.png";
+// import phoneImage from "@/assets/phone-mockup.png";
 
 export const HeroSection = () => {
   const scrollToDownload = () => {
@@ -66,7 +66,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="flex justify-center lg:justify-end">
+          {/* <div className="flex justify-center lg:justify-end">
             <Card className="relative p-8 bg-gradient-card shadow-medical hover:shadow-glow transition-all duration-500">
               <img 
                 src={phoneImage} 
@@ -77,7 +77,7 @@ export const HeroSection = () => {
                 <Heart className="w-8 h-8 text-white" />
               </div>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

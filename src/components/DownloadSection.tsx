@@ -70,8 +70,8 @@ export const DownloadSection = () => {
 
       // Add your Google Drive download links here
       const downloadLinks = {
-        android: 'YOUR_ANDROID_GOOGLE_DRIVE_LINK_HERE',
-        ios: 'YOUR_IOS_GOOGLE_DRIVE_LINK_HERE'
+        android: 'https://drive.google.com/file/d/1DYF8bjS0MEDiMvQmk2iwu1lCj1QzAJY4/view?usp=drive_link',
+        ios: 'https://drive.google.com/file/d/1DYF8bjS0MEDiMvQmk2iwu1lCj1QzAJY4/view?usp=drive_link'
       };
 
       // Open download link
