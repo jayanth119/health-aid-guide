@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { Smartphone, Download, CheckCircle, Apple } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface UserDetails {
   name: string;
@@ -26,7 +27,7 @@ export const DownloadSection = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<'android' | 'ios'>('android');
   const { toast } = useToast();
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!userDetails.name || !userDetails.email || !userDetails.phone) {
       toast({
         title: "Please fill all fields",
@@ -36,23 +37,54 @@ export const DownloadSection = () => {
       return;
     }
 
-    // Here you would typically send the user details to your backend
-    console.log('User details:', userDetails);
-    
-    // Simulate download
-    setTimeout(() => {
-      toast({
-        title: "Download Started!",
-        description: `Matrimedis for ${selectedPlatform === 'android' ? 'Android' : 'iOS'} is downloading...`,
-      });
+    try {
+      // Save user details to Supabase
+      const { error } = await supabase
+        .from('app_downloads')
+        .insert({
+          name: userDetails.name,
+          email: userDetails.email,
+          phone: userDetails.phone,
+          platform: selectedPlatform
+        });
+
+      if (error) {
+        throw error;
+      }
+
+      // Close dialog
       if (selectedPlatform === 'android') {
         setIsAndroidDialogOpen(false);
       } else {
         setIsIosDialogOpen(false);
       }
+
       // Reset form
       setUserDetails({ name: '', email: '', phone: '', platform: selectedPlatform });
-    }, 1000);
+
+      // Show success message and start download
+      toast({
+        title: "Download Started!",
+        description: `Your details have been saved. Matrimedis for ${selectedPlatform === 'android' ? 'Android' : 'iOS'} is downloading...`,
+      });
+
+      // Add your Google Drive download links here
+      const downloadLinks = {
+        android: 'YOUR_ANDROID_GOOGLE_DRIVE_LINK_HERE',
+        ios: 'YOUR_IOS_GOOGLE_DRIVE_LINK_HERE'
+      };
+
+      // Open download link
+      window.open(downloadLinks[selectedPlatform], '_blank');
+
+    } catch (error) {
+      console.error('Error saving download details:', error);
+      toast({
+        title: "Error",
+        description: "Failed to process your download request. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const openDownloadDialog = (platform: 'android' | 'ios') => {
