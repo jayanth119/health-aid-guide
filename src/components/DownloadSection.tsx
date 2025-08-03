@@ -105,6 +105,48 @@ export const DownloadSection = () => {
                       Download for Android
                     </Button>
                   </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center gap-2">
+                        <Smartphone className="w-5 h-5" />
+                        Download Matrimedis for Android
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="name">Full Name</Label>
+                        <Input
+                          id="name"
+                          placeholder="Enter your full name"
+                          value={userDetails.name}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, name: e.target.value }))}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="email">Email Address</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="Enter your email"
+                          value={userDetails.email}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, email: e.target.value }))}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          placeholder="Enter your phone number"
+                          value={userDetails.phone}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, phone: e.target.value }))}
+                        />
+                      </div>
+                      <Button onClick={handleDownload} className="w-full" variant="download">
+                        <Download className="w-4 h-4 mr-2" />
+                        Start Download
+                      </Button>
+                    </div>
+                  </DialogContent>
                 </Dialog>
               </CardContent>
             </Card>
@@ -145,55 +187,54 @@ export const DownloadSection = () => {
                       Download for iOS
                     </Button>
                   </DialogTrigger>
+                  <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="flex items-center gap-2">
+                        <Apple className="w-5 h-5" />
+                        Download Matrimedis for iOS
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="name-ios">Full Name</Label>
+                        <Input
+                          id="name-ios"
+                          placeholder="Enter your full name"
+                          value={userDetails.name}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, name: e.target.value }))}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="email-ios">Email Address</Label>
+                        <Input
+                          id="email-ios"
+                          type="email"
+                          placeholder="Enter your email"
+                          value={userDetails.email}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, email: e.target.value }))}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone-ios">Phone Number</Label>
+                        <Input
+                          id="phone-ios"
+                          placeholder="Enter your phone number"
+                          value={userDetails.phone}
+                          onChange={(e) => setUserDetails(prev => ({ ...prev, phone: e.target.value }))}
+                        />
+                      </div>
+                      <Button onClick={handleDownload} className="w-full" variant="download">
+                        <Download className="w-4 h-4 mr-2" />
+                        Start Download
+                      </Button>
+                    </div>
+                  </DialogContent>
                 </Dialog>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Download Form Dialog */}
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              {selectedPlatform === 'android' ? <Smartphone className="w-5 h-5" /> : <Apple className="w-5 h-5" />}
-              Download Matrimedis for {selectedPlatform === 'android' ? 'Android' : 'iOS'}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <div>
-              <Label htmlFor="name">Full Name</Label>
-              <Input
-                id="name"
-                placeholder="Enter your full name"
-                value={userDetails.name}
-                onChange={(e) => setUserDetails(prev => ({ ...prev, name: e.target.value }))}
-              />
-            </div>
-            <div>
-              <Label htmlFor="email">Email Address</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                value={userDetails.email}
-                onChange={(e) => setUserDetails(prev => ({ ...prev, email: e.target.value }))}
-              />
-            </div>
-            <div>
-              <Label htmlFor="phone">Phone Number</Label>
-              <Input
-                id="phone"
-                placeholder="Enter your phone number"
-                value={userDetails.phone}
-                onChange={(e) => setUserDetails(prev => ({ ...prev, phone: e.target.value }))}
-              />
-            </div>
-            <Button onClick={handleDownload} className="w-full" variant="download">
-              <Download className="w-4 h-4 mr-2" />
-              Start Download
-            </Button>
-          </div>
-        </DialogContent>
       </div>
     </section>
   );
