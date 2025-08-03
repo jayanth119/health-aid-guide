@@ -123,18 +123,18 @@ export const DownloadSection = () => {
                     </DialogHeader>
                     <div className="space-y-4">
                       <div>
-                        <Label htmlFor="name">Full Name</Label>
+                        <Label htmlFor="name-android">Full Name</Label>
                         <Input
-                          id="name"
+                          id="name-android"
                           placeholder="Enter your full name"
                           value={userDetails.name}
                           onChange={(e) => setUserDetails(prev => ({ ...prev, name: e.target.value }))}
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email">Email Address</Label>
+                        <Label htmlFor="email-android">Email Address</Label>
                         <Input
-                          id="email"
+                          id="email-android"
                           type="email"
                           placeholder="Enter your email"
                           value={userDetails.email}
@@ -142,9 +142,9 @@ export const DownloadSection = () => {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="phone">Phone Number</Label>
+                        <Label htmlFor="phone-android">Phone Number</Label>
                         <Input
-                          id="phone"
+                          id="phone-android"
                           placeholder="Enter your phone number"
                           value={userDetails.phone}
                           onChange={(e) => setUserDetails(prev => ({ ...prev, phone: e.target.value }))}
@@ -243,7 +243,6 @@ export const DownloadSection = () => {
             </Card>
           </div>
         </div>
-
       </div>
     </section>
   );
