@@ -21,7 +21,8 @@ export const DownloadSection = () => {
     phone: '',
     platform: 'android'
   });
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAndroidDialogOpen, setIsAndroidDialogOpen] = useState(false);
+  const [isIosDialogOpen, setIsIosDialogOpen] = useState(false);
   const [selectedPlatform, setSelectedPlatform] = useState<'android' | 'ios'>('android');
   const { toast } = useToast();
 
@@ -44,7 +45,11 @@ export const DownloadSection = () => {
         title: "Download Started!",
         description: `Matrimedis for ${selectedPlatform === 'android' ? 'Android' : 'iOS'} is downloading...`,
       });
-      setIsDialogOpen(false);
+      if (selectedPlatform === 'android') {
+        setIsAndroidDialogOpen(false);
+      } else {
+        setIsIosDialogOpen(false);
+      }
       // Reset form
       setUserDetails({ name: '', email: '', phone: '', platform: selectedPlatform });
     }, 1000);
@@ -53,7 +58,11 @@ export const DownloadSection = () => {
   const openDownloadDialog = (platform: 'android' | 'ios') => {
     setSelectedPlatform(platform);
     setUserDetails(prev => ({ ...prev, platform }));
-    setIsDialogOpen(true);
+    if (platform === 'android') {
+      setIsAndroidDialogOpen(true);
+    } else {
+      setIsIosDialogOpen(true);
+    }
   };
 
   return (
@@ -93,7 +102,7 @@ export const DownloadSection = () => {
                   </div>
                 </div>
                 
-                <Dialog open={isDialogOpen && selectedPlatform === 'android'} onOpenChange={setIsDialogOpen}>
+                <Dialog open={isAndroidDialogOpen} onOpenChange={setIsAndroidDialogOpen}>
                   <DialogTrigger asChild>
                     <Button 
                       variant="download" 
@@ -175,7 +184,7 @@ export const DownloadSection = () => {
                   </div>
                 </div>
                 
-                <Dialog open={isDialogOpen && selectedPlatform === 'ios'} onOpenChange={setIsDialogOpen}>
+                <Dialog open={isIosDialogOpen} onOpenChange={setIsIosDialogOpen}>
                   <DialogTrigger asChild>
                     <Button 
                       variant="download" 
