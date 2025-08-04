@@ -51,7 +51,7 @@ export const HeroSection = () => {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50K+</div>
+                <div className="text-2xl font-bold text-primary">100+</div>
                 <div className="text-sm text-muted-foreground">Downloads</div>
               </div>
               <div className="text-center">

@@ -35,25 +35,26 @@ const features = [
     title: "Multi-language Support",
     description: "Available in English, Hindi, and Telugu for better accessibility.",
     color: "text-primary"
-  },
+  }
+  ,
   {
     icon: Volume2,
     title: "Voice Navigation",
     description: "Text-to-Speech support for users who prefer audio assistance.",
     color: "text-secondary"
   },
-  {
-    icon: Smartphone,
-    title: "Real-time Updates",
-    description: "HTTP-based API integration ensures you get the latest medical data.",
-    color: "text-accent"
-  }
+  // {
+  //   icon: Smartphone,
+  //   title: "Real-time Updates",
+  //   description: "HTTP-based API integration ensures you get the latest medical data.",
+  //   color: "text-accent"
+  // }
 ];
 
 const stats = [
   { icon: Pill, label: "Medicine Database", value: "10,000+" },
   { icon: Heart, label: "Conditions Covered", value: "5,000+" },
-  { icon: Users, label: "Active Users", value: "50,000+" }
+  { icon: Users, label: "Active Users", value: "100+" }
 ];
 
 export const FeatureSection = () => {

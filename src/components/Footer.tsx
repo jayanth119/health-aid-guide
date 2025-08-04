@@ -40,11 +40,11 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Get in Touch</h4>
             <div className="space-y-2">
-              <a href="mailto:contact@matrimedis.com" className="flex items-center gap-2 text-background/80 hover:text-primary-glow transition-colors">
+              <a href="mailto:chjayanth119@gmail.com" className="flex items-center gap-2 text-background/80 hover:text-primary-glow transition-colors">
                 <Mail className="w-4 h-4" />
-                contact@matrimedis.com
+               chjayanth119@gmail.com
               </a>
-              <a href="https://github.com/jayanth119/matrimedis" className="flex items-center gap-2 text-background/80 hover:text-primary-glow transition-colors">
+              <a href="https://github.com/jayanth119/" className="flex items-center gap-2 text-background/80 hover:text-primary-glow transition-colors">
                 <Github className="w-4 h-4" />
                 View on GitHub
               </a>
@@ -59,6 +59,7 @@ export const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60">
             © 2024 Matrimedis. Made with ❤️ for better healthcare accessibility.
+            Jaynikos Suraphos, Inc.
           </p>
         </div>
       </div>
