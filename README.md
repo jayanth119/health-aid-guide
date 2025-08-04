@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# 🌐 Matrimedis – Healthcare App Download Website
 
-## Project info
+Welcome to the **official Matrimedis download portal** – a simple, clean, and user-friendly website to **download our Android and iOS apps** directly.
 
-**URL**: https://lovable.dev/projects/f92e2ba3-51d5-4e14-8564-f74c78963c67
+Matrimedis is a **Flutter-powered virtual health assistant** that helps users with **medicine recognition**, **disease info**, **chat-based support**, and **voice navigation** – now accessible in **multiple languages**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📲 Available Downloads
 
-**Use Lovable**
+| Platform | Download Link |
+|----------|----------------|
+| 📱 Android | [Download APK](https://health-aid-guide.vercel.app/) |
+| 🍎 iOS | [Install ipm](https://health-aid-guide.vercel.app/) |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f92e2ba3-51d5-4e14-8564-f74c78963c67) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 💡 About Matrimedis
 
-**Use your preferred IDE**
+Matrimedis is designed to assist users with:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 📷 **Medicine Recognition** – Upload or snap a photo to get instant medicine details.
+- 🩺 **Disease Search** – Get symptoms, suggested medicines, and food recommendations.
+- 🤖 **Chatbot Support** – Talk with a virtual assistant for basic medical help.
+- 🌐 **Multilingual Support** – Use the app in **English**, **Hindi**, or **Telugu**.
+- 🗣️ **Voice Navigation** – Ideal for elderly or illiterate users via **Text-to-Speech**.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🖥 Website Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 📥 Direct APK & iOS download links
+- 📸 Screenshots of the app
+- 📺 Integrated demo video from YouTube
+- 🌟 Clean and responsive UI (mobile-first)
+- 🔗 External links to social & developer profiles
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠 Tech Stack (Website)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **React +TypeScript**
+- **Responsive Design** (Mobile and Desktop)
+---
 
-**Edit a file directly in GitHub**
+## 📺 Demo Video
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+▶️ [Watch on YouTube](https://youtu.be/WQH22xsKI5A?si=GdYygz6WhKQgQ5uq)
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+> 🩺 *Matrimedis – Because health is the real wealth.*
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f92e2ba3-51d5-4e14-8564-f74c78963c67) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
